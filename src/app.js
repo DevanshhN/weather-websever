@@ -18,19 +18,21 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(path.join(__dirname,'../public')))
 app.get('',(req,res)=>{
     res.render('index',{
-        title : 'The weather app'
+        title : 'The weather app',
+        name: "Devansh Nanani"
     })
 })
 
 app.get('/about',(req,res)=>{
     res.render('about',{
-        title: "ABOUT KA ABOUT"
+        title: "About me",
+        name : "Devansh"
     })
 })
 app.get('/help',(req,res)=>{
     res.render('help',{
-        title : "Kya chaiyea",
-        name : "Vasooli bhai"
+        title : "This is some helpful text",
+        name : "Devansh"
     })
 })
 
